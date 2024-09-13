@@ -15,6 +15,7 @@ namespace MultiTenantBlog.API.Repositories
         public async Task CreatePost(Post post)
         {
             await _ctx.Posts.AddAsync(post);
+            await _ctx.SaveChangesAsync();
         }
     }
 }

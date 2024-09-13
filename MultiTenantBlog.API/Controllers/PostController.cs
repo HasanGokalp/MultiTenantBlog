@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using MultiTenantBlog.API.Models.CreatePost;
 using MultiTenantBlog.API.Models.GetAllPost;
 
 namespace MultiTenantBlog.API.Controllers
@@ -19,6 +20,13 @@ namespace MultiTenantBlog.API.Controllers
         public async Task<IActionResult> GetAllPost()
         {
             var result = await _mediator.Send(new GetAllPostReq());
+            return Ok(result);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreatePost(CreatePostReq createPostReq)
+        {
+            var result = await _mediator.Send(createPostReq);
             return Ok(result);
         }
     }

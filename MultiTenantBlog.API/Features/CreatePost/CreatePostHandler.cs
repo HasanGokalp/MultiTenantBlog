@@ -18,8 +18,8 @@ namespace MultiTenantBlog.API.Features.CreatePost
             var entity = new Post
             {
                 Id = 1,
-                Title = "Title",
-                Content = "Content"
+                Title = request.Title,
+                Content = request.Content
             };
             await _writeRepo.CreatePost(entity);
             return new CreatePostRes
