@@ -1,0 +1,27 @@
+{
+  "TentantSettings": {
+    "Defaults": {
+      "ConnectionString": "Server=.\\SQLEXPRESS;Database=MultiTenantDb;Trusted_Connection=True;TrustServerCertificate=True"
+    },
+    "Tentants": [
+      {
+        "Name": "Admin",
+        "TentantId": "Admin",
+        "ConnectionString": "Server=.\\SQLEXPRESS;Database=TenancyAdminDb;Trusted_Connection=True;TrustServerCertificate=True"
+      },
+      {
+        "Name": "User",
+        "TentantId": "User",
+        "ConnectionString": "Server=.\\SQLEXPRESS;Database=TenancyUserDb;Trusted_Connection=True;TrustServerCertificate=True"
+      },
+      {
+        "Name": "_Admin",
+        "TentantId": "_Admin"
+      },
+      {
+        "Name": "_User",
+        "TentantId": "_User"
+      }
+    ]
+  }
+}
