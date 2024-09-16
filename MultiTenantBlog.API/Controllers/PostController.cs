@@ -23,7 +23,7 @@ namespace MultiTenantBlog.API.Controllers
             return Ok(result);
         }
 
-        [HttpPost]
+        [HttpPost("CreatePost")]
         public async Task<IActionResult> CreatePost(CreatePostReq createPostReq)
         {
             var result = await _mediator.Send(createPostReq);

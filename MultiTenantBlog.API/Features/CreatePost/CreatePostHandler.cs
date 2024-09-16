@@ -17,7 +17,6 @@ namespace MultiTenantBlog.API.Features.CreatePost
         {
             var entity = new Post
             {
-                Id = 1,
                 Title = request.Title,
                 Content = request.Content
             };
